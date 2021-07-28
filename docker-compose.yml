@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  web:
+    container_name: ${CONTAINER_NAME}
+    image: ${IMAGE_NAME}
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "${PORT}:4200"
+    expose:
+      - "${PORT}"
