@@ -20,7 +20,16 @@ npm install lint-staged --save-dev
 ```
 Check file config: commitlint.config.js, .lintstagedrc, .husky/*
 
-3. To run project
+3. Install Package
+
+3.1 Install bootstrap
+
+```
+npm install bootstrap
+npm install ngx-bootstrap --save
+```
+
+4. To run project
 
 ```
 npm install
@@ -28,11 +37,11 @@ npm run start
 ```
 Then open browser: http://localhost:4200/
 
-4. To run project with docker
+5. To run project with docker
 
-4.1 Copy .evn.example to .env
+5.1 Copy .evn.example to .env
 
-4.2 Run step 
+5.2 Run step 
 ```
 make docker-build
 make start
