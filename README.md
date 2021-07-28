@@ -32,6 +32,7 @@ Then open browser: http://localhost:4200/
 
 4.1 Copy .evn.example to .env
 
+4.2 Run step 
 ```
 make docker-build
 make start
