@@ -1,0 +1,24 @@
+<div class="bg-success text-white p-3">
+    <div class="text-right">{{ time }}</div>
+    <h1 class="text-center">My To Do List</h1>
+    <form [formGroup]="myForm" data-toggle="validator" role="form" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+            <input formControlName="name" type="text" class="form-control" id="nameId" placeholder="">
+            <button class="btn btn-primary" type="submit">+</button>
+        </div>
+    </form>
+</div>
+<ul class="list-group" *ngIf="todoList.length">
+    <li *ngFor="let item of todoList; index as i; trackBy: trackByFn" class="list-group-item d-flex align-items-center"
+        [ngClass]="{'list-group-item-secondary': item.isChecked}"
+        (click)="changeCheckbox(item.id)"
+    >
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" [(ngModel)]="item.isChecked">
+            <label class="custom-control-label">
+                {{item.name}}
+            </label>
+        </div>
+        <a class="btn btn-outline-danger ml-auto" (click)="removeItem(item.id); $event.stopPropagation();">x</a>
+    </li>
+</ul>

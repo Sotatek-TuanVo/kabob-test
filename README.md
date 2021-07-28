@@ -29,6 +29,23 @@ npm install bootstrap
 npm install ngx-bootstrap --save
 ```
 
+3.2 Install uuid
+```
+npm i uuid
+npm i --save-dev @types/uuid
+```
+
+3.3 Lodash
+```
+npm i lodash
+npm i @types/lodash
+```
+
+3.4 date-fns
+```
+npm i date-fns
+```
+
 4. To run project
 
 ```
